@@ -1,7 +1,44 @@
-!DOCTYPE html
+<!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <button id='btn1' type="button" onclick="addClass()">Add a Class</button>
+    <button id="btn2" type="button" onclick="goToClass()">Class #1</button>
+    <button id="btn3" type="button" onclick="goToClass()">Class #2</button>
+    <button id="btn4" type="button" onclick="goToClass()">Class #3</button>
+    <button id="btn5" type="button" onclick="goToClass()">Class #4</button>
+    <button id="btn6" type="button" onclick="goToClass()">Class #5</button>
+    <button id="btn7" type="button" onclick="goToClass()">Class #6</button>
+    <button id="btn8" type="button" onclick="goToClass()">Class #7</button>
+    <button id="btn9" type="button" onclick="goToClass()">Class #8</button>
+    <button id="btn10" type="button" onclick="goToClass()">Class #9</button>
+    <button id="btn11" type="button" onclick="goToClass()">Class #10</button>
+  <script>
+    document.getElementById("btn2").style.display = "none";
+    document.getElementById("btn3").style.display = "none";
+    document.getElementById("btn4").style.display = "none";
+    document.getElementById("btn5").style.display = "none";
+    document.getElementById("btn6").style.display = "none";
+    document.getElementById("btn7").style.display = "none";
+    document.getElementById("btn8").style.display = "none";
+    document.getElementById("btn9").style.display = "none";
+    document.getElementById("btn10").style.display = "none";
+    document.getElementById("btn11").style.display = "none";
+    var count = 1;
+    function addClass()
+    {
+      count++;
+      var word = "btn" + count;
+      document.getElementById(word).style.display = "block";
+    }
+    //document.body.style.backgroundColor = 'blue';
+  </script>
+  
+  </body>
+  
 </html>
