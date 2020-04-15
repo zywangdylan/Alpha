@@ -3,21 +3,40 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Alpha</title>
+    <style>
+      body {font-family: Arial, Helvetica, sans-serif;}
+      button 
+      {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button:hover 
+      {
+        opacity: 0.8;
+      }
+      
+    </style>
   </head>
   <body>
-    <button id='btn1' type="button" onclick="addClass()">Add a Class</button>
-    <button id="btn2" type="button" onclick="goToClass()">Class #1</button>
-    <button id="btn3" type="button" onclick="goToClass()">Class #2</button>
-    <button id="btn4" type="button" onclick="goToClass()">Class #3</button>
-    <button id="btn5" type="button" onclick="goToClass()">Class #4</button>
-    <button id="btn6" type="button" onclick="goToClass()">Class #5</button>
-    <button id="btn7" type="button" onclick="goToClass()">Class #6</button>
-    <button id="btn8" type="button" onclick="goToClass()">Class #7</button>
-    <button id="btn9" type="button" onclick="goToClass()">Class #8</button>
-    <button id="btn10" type="button" onclick="goToClass()">Class #9</button>
-    <button id="btn11" type="button" onclick="goToClass()">Class #10</button>
+    <button id="btn1" type="button" onclick="addClass()">Add a Class</button>
+    <button id="btn2" type="button" onclick="goToClass(1)">Class #1</button>
+    <button id="btn3" type="button" onclick="goToClass(2)">Class #2</button>
+    <button id="btn4" type="button" onclick="goToClass(3)">Class #3</button>
+    <button id="btn5" type="button" onclick="goToClass(4)">Class #4</button>
+    <button id="btn6" type="button" onclick="goToClass(5)">Class #5</button>
+    <button id="btn7" type="button" onclick="goToClass(6)">Class #6</button>
+    <button id="btn8" type="button" onclick="goToClass(7)">Class #7</button>
+    <button id="btn9" type="button" onclick="goToClass(8)">Class #8</button>
+    <button id="btn10" type="button" onclick="goToClass(9)">Class #9</button>
+    <button id="btn11" type="button" onclick="goToClass(10)">Class #10</button>
+    <p id="test"></p>
   <script>
     document.getElementById("btn2").style.display = "none";
     document.getElementById("btn3").style.display = "none";
@@ -36,7 +55,11 @@
       var word = "btn" + count;
       document.getElementById(word).style.display = "block";
     }
-    //document.body.style.backgroundColor = 'blue';
+    function goToClass(name)
+    {
+      var word = name;
+      window.location.href = "/class" + word + ".html";
+    }
   </script>
   
   </body>
