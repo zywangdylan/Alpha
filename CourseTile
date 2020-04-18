@@ -14,7 +14,7 @@
         margin: 8px 0;
         border: none;
         cursor: pointer;
-        width: 100%;
+        width: 50%;
       }
 
       button:hover 
@@ -26,6 +26,7 @@
   </head>
   <body>
     <button id="btn1" type="button" onclick="addClass()">Add a Class</button>
+    <button id="btn1.5" type="button" onclick="removeClass()">Remove a Class</button>
     <button id="btn2" type="button" onclick="goToClass(1)">Class #1</button>
     <button id="btn3" type="button" onclick="goToClass(2)">Class #2</button>
     <button id="btn4" type="button" onclick="goToClass(3)">Class #3</button>
@@ -54,6 +55,13 @@
       count++;
       var word = "btn" + count;
       document.getElementById(word).style.display = "block";
+    }
+    function removeClass()
+    {
+      
+      var word = "btn" + count;
+      document.getElementById(word).style.display = "none";
+      count--;
     }
     function goToClass(name)
     {
